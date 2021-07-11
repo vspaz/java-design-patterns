@@ -1,5 +1,5 @@
 package org.vspaz.strategy.fly;
 
-interface FlyBehavior {
+public interface Fly {
     void fly();
 }

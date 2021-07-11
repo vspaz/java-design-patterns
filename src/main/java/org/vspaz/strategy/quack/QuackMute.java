@@ -1,6 +1,6 @@
 package org.vspaz.strategy.quack;
 
-public class MuteQuack implements QuackBehavior {
+public class QuackMute implements Quack {
     @Override
     public void quack() {
         System.out.println("Silence.");

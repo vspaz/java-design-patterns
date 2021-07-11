@@ -1,8 +1,8 @@
 package org.vspaz.strategy.quack;
 
-public class Squeak implements Quack {
+public class QuackRegular implements Quack {
     @Override
     public void quack() {
-        System.out.println("Squeak");
+        System.out.println("Quack");
     }
 }
