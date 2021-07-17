@@ -10,7 +10,7 @@ public class Model extends Duck{
     }
 
     @Override
-    String display() {
+    public String describe() {
         return "I am a model duck";
     }
 }

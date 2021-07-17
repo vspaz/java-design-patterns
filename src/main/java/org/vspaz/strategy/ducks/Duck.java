@@ -7,9 +7,7 @@ public abstract class Duck {
     Fly fly;
     Quack quack;
 
-    public Duck() {
-
-    }
+    public Duck() {}
 
     public void setFlyBehavior(Fly fly) {
         this.fly = fly;
@@ -19,7 +17,7 @@ public abstract class Duck {
         this.quack = quack;
     }
 
-    abstract String display();
+    abstract String describe();
 
     public String doFly() {
         return fly.fly();

@@ -12,7 +12,7 @@ public class StrategyTest {
     @Test
     void testMallard() {
         Mallard mallard = new Mallard();
-        Assert.assertEquals(mallard.display(), "I am a mallard duck");
+        Assert.assertEquals(mallard.describe(), "I am a mallard duck");
         Assert.assertEquals(mallard.swim(), "All ducks float, even decoys");
         Assert.assertEquals(mallard.doQuack(), "Quack");
         Assert.assertEquals(mallard.doFly(), "I'm flying");
@@ -21,14 +21,16 @@ public class StrategyTest {
     @Test
     void testRubberDuck() {
         RubberToy rubberToy = new RubberToy();
+        Assert.assertEquals(rubberToy.describe(), "I am a rubber toy duck");
         Assert.assertEquals(rubberToy.swim(), "All ducks float, even decoys");
-        Assert.assertEquals(rubberToy.doFly(), "can't fly");
         Assert.assertEquals(rubberToy.doQuack(), "Squeak");
+        Assert.assertEquals(rubberToy.doFly(), "can't fly");
     }
 
     @Test
     void testModelDuck() {
         Model model = new Model();
+        Assert.assertEquals(model.describe(), "I am a model duck");
         Assert.assertEquals(model.swim(), "All ducks float, even decoys");
         Assert.assertEquals(model.doQuack(), "Quack");
         Assert.assertEquals(model.doFly(), "can't fly");

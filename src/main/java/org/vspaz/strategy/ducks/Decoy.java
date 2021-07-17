@@ -10,7 +10,7 @@ public class Decoy extends Duck {
     }
 
     @Override
-    String display() {
+    public String describe() {
         return "I'm a decoy duck";
     }
 }
