@@ -1,6 +1,7 @@
 package org.vspaz.strategy.ducks;
 
 import org.vspaz.strategy.fly.FlyWithWings;
+
 import org.vspaz.strategy.quack.QuackRegular;
 
 public class Mallard extends Duck {
@@ -11,7 +12,7 @@ public class Mallard extends Duck {
     }
 
     @Override
-    void display() {
-
+    public String display() {
+        return "I am a mallard duck";
     }
 }

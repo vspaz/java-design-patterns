@@ -10,7 +10,7 @@ public class RubberToy extends Duck {
     }
 
     @Override
-    void display() {
-        System.out.println("I am a rubber toy duck");
+    String display() {
+        return "I am a rubber toy duck";
     }
 }

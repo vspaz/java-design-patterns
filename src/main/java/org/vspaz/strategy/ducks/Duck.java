@@ -19,17 +19,17 @@ public abstract class Duck {
         this.quack = quack;
     }
 
-    abstract void display();
+    abstract String display();
 
-    public void doFly() {
-        fly.fly();
+    public String doFly() {
+        return fly.fly();
     }
 
-    public void doQuack() {
-        quack.quack();
+    public String doQuack() {
+        return quack.quack();
     }
 
-    public void swim() {
-        System.out.println("All ducks float, even decoys");
+    public String swim() {
+        return "All ducks float, even decoys";
     }
 }
