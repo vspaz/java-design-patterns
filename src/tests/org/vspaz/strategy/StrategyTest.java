@@ -25,4 +25,21 @@ public class StrategyTest {
         Assert.assertEquals(rubberToy.doFly(), "can't fly");
         Assert.assertEquals(rubberToy.doQuack(), "Squeak");
     }
+
+    @Test
+    void testModelDuck() {
+        Model model = new Model();
+        Assert.assertEquals(model.swim(), "All ducks float, even decoys");
+        Assert.assertEquals(model.doQuack(), "Quack");
+        Assert.assertEquals(model.doFly(), "can't fly");
+    }
+
+    @Test
+    void testModelDuckRedefined() {
+        Model model = new Model();
+        Assert.assertEquals(model.doFly(), "can't fly");
+
+        model.setFlyBehavior(new FlyRocketPowered());
+        Assert.assertEquals(model.doFly(), "I'm flying with a rocket.");
+    }
 }
