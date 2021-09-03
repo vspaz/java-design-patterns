@@ -1,7 +1,10 @@
 package org.vspaz.singleton;
 
-public class Singleton {
+class Singleton {
     private static Singleton singleton;
+    private Singleton() {
+
+    }
 
     public static synchronized Singleton getSingleton() {
         if (singleton == null) {
