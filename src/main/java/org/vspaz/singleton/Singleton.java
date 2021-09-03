@@ -2,6 +2,12 @@ package org.vspaz.singleton;
 
 class Singleton {
     private static Singleton singleton;
+    private static int count = 0;
+
+    public static int getCount() {
+        return count;
+    }
+
     private Singleton() {
 
     }
@@ -10,6 +16,7 @@ class Singleton {
         if (singleton == null) {
             singleton = new Singleton();
         }
+        count++;
         return singleton;
     }
 }
