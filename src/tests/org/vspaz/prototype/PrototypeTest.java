@@ -12,6 +12,6 @@ public class PrototypeTest {
 
         tesla_2.setModelName("m2");
         Assert.assertEquals(tesla_2.getModelName(), "m2");
-        Assert.assertEquals(tesla_1.getModelName(), "m1");
+        Assert.assertNotEquals(tesla_1.getModelName(), tesla_2.getModelName());
     }
 }
