@@ -9,5 +9,9 @@ public class PrototypeTest {
         Tesla tesla_1 = new Tesla("m1");
         CarBase tesla_2 = tesla_1.clone();
         Assert.assertEquals(tesla_1.getModelName(), tesla_2.getModelName());
+
+        tesla_2.setModelName("m2");
+        Assert.assertEquals(tesla_2.getModelName(), "m2");
+        Assert.assertEquals(tesla_1.getModelName(), "m1");
     }
 }
