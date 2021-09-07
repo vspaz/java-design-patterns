@@ -1,14 +1,11 @@
 package org.vspaz.creational.builder;
 
-import java.net.http.WebSocket;
 
 public class Car implements IBuilder {
-    private String brandName;
-    private Product product = new Product();
+    private final Product product = new Product();
 
     public Car(String brandName) {
-        this.brandName = brandName;
-        product.add(String.format("Car model is :%s", this.brandName));
+        product.add(String.format("Car model is :%s", brandName));
 
     }
 
