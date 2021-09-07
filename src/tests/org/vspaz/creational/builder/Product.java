@@ -1,6 +1,5 @@
 package org.vspaz.creational.builder;
 
-import java.util.LinkedList;
 
 public class Product {
     private final StringBuilder parts;
