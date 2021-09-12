@@ -11,4 +11,10 @@ public class FactoryTest {
         Assert.assertEquals(cow.getFood(), "grazing");
         Assert.assertEquals(cow.makeSound(), "mu...");
     }
+
+    @Test
+    void testAnimalUndefined() {
+        IAnimal someUndefAnimal = AnimalFactory.getAnimal("undef");
+        Assert.assertNull(someUndefAnimal);
+    }
 }
