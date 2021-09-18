@@ -3,7 +3,7 @@ package org.vspaz.creational.afactory;
 public class RussianBlue implements ICanine{
     @Override
     public String makeSound() {
-        return "mew, mew";
+        return "meow, meow";
     }
 
     @Override
