@@ -7,10 +7,10 @@ public class TestAbstractFactory {
     @Test
     void testDomesticFactoryOk() {
         IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
-        IAnimalae domesticCat = domesticFactory.getAnimal("russian-blue");
+        IAnimalae russianBlue = domesticFactory.getAnimal("russian-blue");
 
-        Assert.assertEquals(domesticCat.makeSound(), "meow, meow");
-        Assert.assertEquals(domesticCat.doAction(), "sleep on the coach");
+        Assert.assertEquals(russianBlue.makeSound(), "meow, meow");
+        Assert.assertEquals(russianBlue.doAction(), "sleep on the coach");
 
     }
 
@@ -33,10 +33,10 @@ public class TestAbstractFactory {
     @Test
     void testWildFactoryOk() {
         IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
-        IAnimalae domesticCat = wildAnimalFactory.getAnimal("lynx");
+        IAnimalae lynx = wildAnimalFactory.getAnimal("lynx");
 
-        Assert.assertEquals(domesticCat.makeSound(), "growl");
-        Assert.assertEquals(domesticCat.doAction(), "kill a wild goat");
+        Assert.assertEquals(lynx.makeSound(), "growl");
+        Assert.assertEquals(lynx.doAction(), "kill a wild goat");
     }
 
     @Test
