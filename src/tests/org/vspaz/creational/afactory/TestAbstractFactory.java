@@ -17,14 +17,14 @@ public class TestAbstractFactory {
     @Test
     void testUndefDomesticAnimal() {
         IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
-        Assert.expectThrows(RuntimeException.class, () -> {
+        Assert.assertThrows(RuntimeException.class, () -> {
             domesticFactory.getAnimal("someUndefAnimal");
         });
     }
 
     @Test
     void testCreateFactoryFail() {
-        Assert.expectThrows(
+        Assert.assertThrows(
                 RuntimeException.class, () -> {
                     AnimalAbstractFactory.getAnimalFactory("someUndefFactory");
                 });
@@ -42,7 +42,7 @@ public class TestAbstractFactory {
     @Test
     void testUndefWildAnimal() {
         IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
-        Assert.expectThrows(RuntimeException.class, () -> {
+        Assert.assertThrows(RuntimeException.class, () -> {
             wildAnimalFactory.getAnimal("someUndefWildAnimal");
         });
     }
