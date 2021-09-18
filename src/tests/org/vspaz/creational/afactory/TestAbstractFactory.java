@@ -8,11 +8,10 @@ public class TestAbstractFactory {
     void testDomesticFactoryOk() {
         IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
         IAnimalae domesticCat = domesticFactory.getAnimal("russian-blue");
+
         Assert.assertEquals(domesticCat.makeSound(), "meow, meow");
         Assert.assertEquals(domesticCat.doAction(), "sleep on the coach");
-        Assert.expectThrows(RuntimeException.class, () -> {
-            domesticFactory.getAnimal("someUndefAnimal");
-        });
+
     }
 
     @Test
