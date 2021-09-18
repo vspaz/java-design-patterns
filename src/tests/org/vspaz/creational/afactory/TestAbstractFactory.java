@@ -29,4 +29,21 @@ public class TestAbstractFactory {
                     AnimalAbstractFactory.getAnimalFactory("someUndefFactory");
                 });
     }
+
+    @Test
+    void testWildFactoryOk() {
+        IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
+        IAnimalae domesticCat = wildAnimalFactory.getAnimal("lynx");
+
+        Assert.assertEquals(domesticCat.makeSound(), "growl");
+        Assert.assertEquals(domesticCat.doAction(), "kill a wild goat");
+    }
+
+    @Test
+    void testUndefWildAnimal() {
+        IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
+        Assert.expectThrows(RuntimeException.class, () -> {
+            wildAnimalFactory.getAnimal("someUndefWildAnimal");
+        });
+    }
 }
