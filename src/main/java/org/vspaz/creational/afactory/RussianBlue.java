@@ -3,11 +3,11 @@ package org.vspaz.creational.afactory;
 public class RussianBlue implements ICanine{
     @Override
     public String makeSound() {
-        return null;
+        return "mew, mew";
     }
 
     @Override
     public String doAction() {
-        return null;
+        return "sleep on the coach";
     }
 }

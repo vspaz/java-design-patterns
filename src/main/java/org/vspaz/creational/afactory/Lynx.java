@@ -3,11 +3,11 @@ package org.vspaz.creational.afactory;
 public class Lynx implements IFeline {
     @Override
     public String makeSound() {
-        return null;
+        return "growl";
     }
 
     @Override
     public String doAction() {
-        return null;
+        return "kill a wild goat";
     }
 }

@@ -3,11 +3,11 @@ package org.vspaz.creational.afactory;
 public class Dachshund implements ICanine {
     @Override
     public String makeSound() {
-        return null;
+        return "woof, woof";
     }
 
     @Override
     public String doAction() {
-        return null;
+        return "run around the house";
     }
 }
