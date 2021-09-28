@@ -1,6 +1,6 @@
 package org.vspaz.structural.decorator;
 
-public class Floor extends BaseDecorator {
+public class FloorDecorator extends BaseDecorator {
     @Override
     public String buildHouse() {
         return super.buildHouse() + addFloor();
