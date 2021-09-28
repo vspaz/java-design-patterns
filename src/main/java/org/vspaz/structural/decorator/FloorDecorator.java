@@ -7,6 +7,6 @@ public class FloorDecorator extends BaseDecorator {
     }
 
     private String addFloor() {
-        return "floor added";
+        return "; oak floor added";
     }
 }
