@@ -12,5 +12,9 @@ public class TestDecorator {
         FloorDecorator floorDecorator = new FloorDecorator();
         floorDecorator.setBuildingBlock(block);
         Assert.assertEquals(floorDecorator.buildHouse(), "house is built; oak floor added");
+
+        HouseFacadeDecorator facadeDecorator = new HouseFacadeDecorator();
+        facadeDecorator.setBuildingBlock(floorDecorator);
+        Assert.assertEquals(facadeDecorator.buildHouse(), "house is built; oak floor added; brick facade added");
     }
 }
