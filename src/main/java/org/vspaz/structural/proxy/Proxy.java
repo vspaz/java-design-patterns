@@ -1,4 +1,6 @@
-package org.vspaz.structural;
+package org.vspaz.structural.proxy;
+
+import org.vspaz.structural.proxy.Worker;
 
 public class Proxy extends Worker {
     static Worker worker;
