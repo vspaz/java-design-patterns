@@ -5,8 +5,8 @@ public class Rectangle {
     double width;
 
     public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
+        setLength(length);
+        setWidth(width);
     }
 
 
