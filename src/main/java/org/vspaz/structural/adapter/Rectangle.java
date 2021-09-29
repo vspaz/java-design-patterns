@@ -1,8 +1,8 @@
 package org.vspaz.structural.adapter;
 
 public class Rectangle {
-    double length;
-    double width;
+    private double length;
+    private double width;
 
     public Rectangle(double length, double width) {
         setLength(length);
