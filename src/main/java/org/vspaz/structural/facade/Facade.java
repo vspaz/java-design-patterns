@@ -16,10 +16,10 @@ public class Facade {
     }
 
     public String buildRobot() {
-        return String.join(" ", body.createRobot(), color.setDefault(), arms.setBionic(), body.addArms(), body.addLegs());
+        return String.join(";", body.createRobot(), color.setDefault(), arms.setBionic(), body.addArms(), body.addLegs());
     }
 
     public String deleteRobot() {
-        return String.join("", body.deleteArms(), body.deleteLegs(), body.deleteRobot());
+        return String.join(";", body.deleteArms(), body.deleteLegs(), body.deleteRobot());
     }
 }

@@ -2,7 +2,7 @@ package org.vspaz.structural.facade.robot;
 
 public class Body {
     public String createRobot() {
-        return String.format("%s robot is created", Body.class.getName());
+        return String.format("'%s' robot is created", Body.class.getName());
     }
 
     public String addArms() {
@@ -14,7 +14,7 @@ public class Body {
     }
 
     public String deleteRobot() {
-        return String.format("%s robot is deleted", Body.class.getName());
+        return String.format("'%s' robot is deleted", Body.class.getName());
     }
 
     public String deleteArms() {
