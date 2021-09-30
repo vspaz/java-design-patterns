@@ -1,4 +1,4 @@
-package org.vspaz.structural.facade.body;
+package org.vspaz.structural.facade.robot;
 
 public class Body {
     public String createRobot() {
@@ -15,5 +15,13 @@ public class Body {
 
     public String deleteRobot() {
         return String.format("%s robot is deleted", Body.class.getName());
+    }
+
+    public String deleteArms() {
+        return "arms deleted";
+    }
+
+    public String deleteLegs() {
+        return "legs deleted";
     }
 }
