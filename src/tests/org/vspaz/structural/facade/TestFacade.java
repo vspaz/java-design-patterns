@@ -10,5 +10,10 @@ public class TestFacade {
         Assert.assertEquals(
                 robotFacade.buildRobot(),
                 "'org.vspaz.structural.facade.robot.Body' robot is created;steel color set;bionic arms are set;arms added;legs added");
+
+        Assert.assertEquals(
+                robotFacade.deleteRobot(),
+                "arms deleted;legs deleted;'org.vspaz.structural.facade.robot.Body' robot is deleted"
+        );
     }
 }
