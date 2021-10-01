@@ -1,28 +1,29 @@
 package org.vspaz.creational.factory;
 
-import org.junit.Test;
-import org.testng.Assert;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FactoryTest {
   @Test
-  public void testCowOk() {
+  void testCowOk() {
     IAnimal cow = AnimalFactory.getAnimal("cow");
-    Assert.assertNotNull(cow);
-    Assert.assertEquals(cow.getFood(), "grazing");
-    Assert.assertEquals(cow.makeSound(), "mu...");
+    assertNotNull(cow);
+    assertEquals(cow.getFood(), "grazing");
+    assertEquals(cow.makeSound(), "mu...");
   }
 
   @Test
-  public void testAnimalUndefined() {
+  void testAnimalUndefined() {
     IAnimal someUndefAnimal = AnimalFactory.getAnimal("undef");
-    Assert.assertNull(someUndefAnimal);
+    assertNull(someUndefAnimal);
   }
 
   @Test
-  public void testWulfOk() {
+  void testWulfOk() {
     Wolf wolf = (Wolf) AnimalFactory.getAnimal("wolf");
-    Assert.assertNotNull(wolf);
-    Assert.assertEquals(wolf.getFood(), "attack prey");
-    Assert.assertEquals(wolf.makeSound(), "growl");
+    assertNotNull(wolf);
+    assertEquals(wolf.getFood(), "attack prey");
+    assertEquals(wolf.makeSound(), "growl");
   }
 }
