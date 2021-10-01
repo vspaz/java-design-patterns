@@ -1,7 +1,7 @@
-package org.vspaz.creational.strategy.ducks;
+package org.vspaz.behavioral.strategy.ducks;
 
-import org.vspaz.creational.strategy.fly.Fly;
-import org.vspaz.creational.strategy.quack.Quack;
+import org.vspaz.behavioral.strategy.fly.Fly;
+import org.vspaz.behavioral.strategy.quack.Quack;
 
 public abstract class Duck {
     Fly fly;

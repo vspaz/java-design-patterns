@@ -1,7 +1,7 @@
-package org.vspaz.creational.strategy.ducks;
+package org.vspaz.behavioral.strategy.ducks;
 
-import org.vspaz.creational.strategy.fly.FlyWithWings;
-import org.vspaz.creational.strategy.quack.QuackRegular;
+import org.vspaz.behavioral.strategy.fly.FlyWithWings;
+import org.vspaz.behavioral.strategy.quack.QuackRegular;
 
 public class RedHead extends Duck {
     public RedHead() {

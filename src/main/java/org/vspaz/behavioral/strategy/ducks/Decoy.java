@@ -1,7 +1,7 @@
-package org.vspaz.creational.strategy.ducks;
+package org.vspaz.behavioral.strategy.ducks;
 
-import org.vspaz.creational.strategy.fly.FlyInability;
-import org.vspaz.creational.strategy.quack.QuackMute;
+import org.vspaz.behavioral.strategy.fly.FlyInability;
+import org.vspaz.behavioral.strategy.quack.QuackMute;
 
 public class Decoy extends Duck {
     public Decoy() {

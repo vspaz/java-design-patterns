@@ -1,13 +1,13 @@
-package org.vspaz.creational.strategy;
+package org.vspaz.behavioral.strategy;
 
 import org.junit.Test;
 import org.testng.Assert;
-import org.vspaz.creational.strategy.ducks.Decoy;
-import org.vspaz.creational.strategy.ducks.Mallard;
-import org.vspaz.creational.strategy.ducks.Model;
-import org.vspaz.creational.strategy.ducks.RedHead;
-import org.vspaz.creational.strategy.ducks.RubberToy;
-import org.vspaz.creational.strategy.fly.FlyRocketPowered;
+import org.vspaz.behavioral.strategy.ducks.Decoy;
+import org.vspaz.behavioral.strategy.ducks.Mallard;
+import org.vspaz.behavioral.strategy.ducks.Model;
+import org.vspaz.behavioral.strategy.ducks.RedHead;
+import org.vspaz.behavioral.strategy.ducks.RubberToy;
+import org.vspaz.behavioral.strategy.fly.FlyRocketPowered;
 
 public class StrategyTest {
     @Test

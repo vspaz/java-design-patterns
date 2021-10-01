@@ -1,4 +1,4 @@
-package org.vspaz.creational.strategy.fly;
+package org.vspaz.behavioral.strategy.fly;
 
 public interface Fly {
     String fly();

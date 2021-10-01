@@ -1,4 +1,4 @@
-package org.vspaz.creational.strategy.quack;
+package org.vspaz.behavioral.strategy.quack;
 
 public interface Quack {
     String quack();
