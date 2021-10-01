@@ -1,15 +1,16 @@
 package org.vspaz.creational.singleton;
 
-import org.junit.Test;
-import org.testng.Assert;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SingletonTest {
   @Test
-  public void testSingletonOk() {
+  void testSingletonOk() {
     Singleton singleton_1 = Singleton.getSingleton();
     Singleton singleton_2 = Singleton.getSingleton();
-    Assert.assertEquals(singleton_1, singleton_2);
+    assertEquals(singleton_1, singleton_2);
 
-    Assert.assertEquals(2, Singleton.getCount());
+    assertEquals(2, Singleton.getCount());
   }
 }
