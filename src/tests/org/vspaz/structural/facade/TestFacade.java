@@ -2,7 +2,7 @@ package org.vspaz.structural.facade;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestFacade {
   @Test
