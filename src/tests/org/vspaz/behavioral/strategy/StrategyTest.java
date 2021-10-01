@@ -8,6 +8,7 @@ import org.vspaz.behavioral.strategy.ducks.RubberToy;
 import org.vspaz.behavioral.strategy.fly.FlyRocketPowered;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 public class StrategyTest {
