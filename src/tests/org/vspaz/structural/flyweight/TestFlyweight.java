@@ -1,17 +1,18 @@
 package org.vspaz.structural.flyweight;
 
-import org.junit.Test;
-import org.testng.Assert;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestFlyweight {
   @Test
-  public void testFlyweightOk() throws Exception {
+  void testFlyweightOk() throws Exception {
     IVehicle suv_1 = CarFactory.getCar("suv");
-    Assert.assertEquals(
+    assertEquals(
         suv_1.getInfo("blue"),
         "car 'org.vspaz.structural.flyweight.SUV' of color 'blue' is created");
 
     IVehicle suv_2 = CarFactory.getCar("suv");
-    Assert.assertEquals(suv_1, suv_2);
+    assertEquals(suv_1, suv_2);
   }
 }
