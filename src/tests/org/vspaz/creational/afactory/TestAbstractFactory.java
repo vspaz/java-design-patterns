@@ -1,11 +1,11 @@
 package org.vspaz.creational.afactory;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestAbstractFactory {
     @Test
-    void testDomesticFactoryOk() {
+    public void testDomesticFactoryOk() {
         IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
         IAnimalae russianBlue = domesticFactory.getAnimal("russian-blue");
 
@@ -15,7 +15,7 @@ public class TestAbstractFactory {
     }
 
     @Test
-    void testUndefDomesticAnimal() {
+    public void testUndefDomesticAnimal() {
         IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
         Assert.assertThrows(RuntimeException.class, () -> {
             domesticFactory.getAnimal("someUndefAnimal");
@@ -23,7 +23,7 @@ public class TestAbstractFactory {
     }
 
     @Test
-    void testCreateFactoryFail() {
+    public void testCreateFactoryFail() {
         Assert.assertThrows(
                 RuntimeException.class, () -> {
                     AnimalAbstractFactory.getAnimalFactory("someUndefFactory");
@@ -31,7 +31,7 @@ public class TestAbstractFactory {
     }
 
     @Test
-    void testWildFactoryOk() {
+    public void testWildFactoryOk() {
         IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
         IAnimalae lynx = wildAnimalFactory.getAnimal("lynx");
 
@@ -40,7 +40,7 @@ public class TestAbstractFactory {
     }
 
     @Test
-    void testUndefWildAnimal() {
+    public void testUndefWildAnimal() {
         IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
         Assert.assertThrows(RuntimeException.class, () -> {
             wildAnimalFactory.getAnimal("someUndefWildAnimal");

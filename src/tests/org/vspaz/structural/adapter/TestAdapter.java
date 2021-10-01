@@ -1,11 +1,11 @@
 package org.vspaz.structural.adapter;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestAdapter {
     @Test
-    void testAdapterOk() {
+    public void testAdapterOk() {
         Calculator calculator = new Calculator();
         Rectangle rectangle = new Rectangle(20, 30);
         Assert.assertEquals(calculator.getArea(rectangle), 600);

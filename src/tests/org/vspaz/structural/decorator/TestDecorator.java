@@ -1,11 +1,11 @@
 package org.vspaz.structural.decorator;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestDecorator {
     @Test
-    void testDecoratorOk() {
+    public void testDecoratorOk() {
         Block block = new Block();
         Assert.assertEquals(block.buildHouse(), "house is built");
 

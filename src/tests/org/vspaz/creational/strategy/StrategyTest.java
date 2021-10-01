@@ -1,6 +1,6 @@
 package org.vspaz.creational.strategy;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 import org.testng.Assert;
 import org.vspaz.creational.strategy.ducks.Decoy;
 import org.vspaz.creational.strategy.ducks.Mallard;
@@ -11,7 +11,7 @@ import org.vspaz.creational.strategy.fly.FlyRocketPowered;
 
 public class StrategyTest {
     @Test
-    void testMallard() {
+    public void testMallard() {
         Mallard mallard = new Mallard();
         Assert.assertEquals(mallard.describe(), "I am a mallard duck");
         Assert.assertEquals(mallard.swim(), "All ducks float, even decoys");
@@ -20,7 +20,7 @@ public class StrategyTest {
     }
 
     @Test
-    void testRubberDuck() {
+    public void testRubberDuck() {
         RubberToy rubberToy = new RubberToy();
         Assert.assertEquals(rubberToy.describe(), "I am a rubber toy duck");
         Assert.assertEquals(rubberToy.swim(), "All ducks float, even decoys");
@@ -29,7 +29,7 @@ public class StrategyTest {
     }
 
     @Test
-    void testDecoyDuck() {
+    public void testDecoyDuck() {
         Decoy decoy = new Decoy();
         Assert.assertEquals(decoy.describe(), "I'm a decoy duck");
         Assert.assertEquals(decoy.swim(), "All ducks float, even decoys");
@@ -38,7 +38,7 @@ public class StrategyTest {
     }
 
     @Test
-    void testRedHead() {
+    public void testRedHead() {
         RedHead readHead = new RedHead();
         Assert.assertEquals(readHead.describe(), "I am a real read head duck");
         Assert.assertEquals(readHead.swim(), "All ducks float, even decoys");
@@ -47,7 +47,7 @@ public class StrategyTest {
     }
 
     @Test
-    void testModelDuck() {
+    public void testModelDuck() {
         Model model = new Model();
         Assert.assertEquals(model.describe(), "I am a model duck");
         Assert.assertEquals(model.swim(), "All ducks float, even decoys");
@@ -56,7 +56,7 @@ public class StrategyTest {
     }
 
     @Test
-    void testModelDuckRedefined() {
+    public void testModelDuckRedefined() {
         Model model = new Model();
         Assert.assertEquals(model.doFly(), "can't fly");
 

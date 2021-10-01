@@ -1,11 +1,11 @@
 package org.vspaz.creational.builder;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestBuilder {
     @Test
-    void testBuilderOk() {
+    public void testBuilderOk() {
         Car car = new Car("Corvette");
         car.Body("carbon");
         car.Wheels(4);
