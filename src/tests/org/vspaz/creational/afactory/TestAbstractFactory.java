@@ -1,22 +1,24 @@
 package org.vspaz.creational.afactory;
 
-import org.junit.Test;
-import org.testng.Assert;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestAbstractFactory {
   @Test
-  public void testDomesticFactoryOk() {
+  void testDomesticFactoryOk() {
     IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
     IAnimalae russianBlue = domesticFactory.getAnimal("russian-blue");
 
-    Assert.assertEquals(russianBlue.makeSound(), "meow, meow");
-    Assert.assertEquals(russianBlue.doAction(), "sleep on the coach");
+    assertEquals(russianBlue.makeSound(), "meow, meow");
+    assertEquals(russianBlue.doAction(), "sleep on the coach");
   }
 
   @Test
-  public void testUndefDomesticAnimal() {
+  void testUndefDomesticAnimal() {
     IAnimalFactory domesticFactory = AnimalAbstractFactory.getAnimalFactory("domestic");
-    Assert.assertThrows(
+    assertThrows(
         RuntimeException.class,
         () -> {
           domesticFactory.getAnimal("someUndefAnimal");
@@ -24,8 +26,8 @@ public class TestAbstractFactory {
   }
 
   @Test
-  public void testCreateFactoryFail() {
-    Assert.assertThrows(
+  void testCreateFactoryFail() {
+    assertThrows(
         RuntimeException.class,
         () -> {
           AnimalAbstractFactory.getAnimalFactory("someUndefFactory");
@@ -33,18 +35,18 @@ public class TestAbstractFactory {
   }
 
   @Test
-  public void testWildFactoryOk() {
+  void testWildFactoryOk() {
     IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
     IAnimalae lynx = wildAnimalFactory.getAnimal("lynx");
 
-    Assert.assertEquals(lynx.makeSound(), "growl");
-    Assert.assertEquals(lynx.doAction(), "kill a wild goat");
+    assertEquals(lynx.makeSound(), "growl");
+    assertEquals(lynx.doAction(), "kill a wild goat");
   }
 
   @Test
-  public void testUndefWildAnimal() {
+  void testUndefWildAnimal() {
     IAnimalFactory wildAnimalFactory = AnimalAbstractFactory.getAnimalFactory("wild");
-    Assert.assertThrows(
+    assertThrows(
         RuntimeException.class,
         () -> {
           wildAnimalFactory.getAnimal("someUndefWildAnimal");
