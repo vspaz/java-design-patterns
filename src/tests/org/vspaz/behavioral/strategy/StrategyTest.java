@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StrategyTest {
   @Test
-  public void testMallard() {
+  void testMallard() {
     Mallard mallard = new Mallard();
     assertEquals(mallard.describe(), "I am a mallard duck");
     assertEquals(mallard.swim(), "All ducks float, even decoys");
@@ -17,7 +17,7 @@ public class StrategyTest {
   }
 
   @Test
-  public void testRubberDuck() {
+  void testRubberDuck() {
     RubberToy rubberToy = new RubberToy();
     assertEquals(rubberToy.describe(), "I am a rubber toy duck");
     assertEquals(rubberToy.swim(), "All ducks float, even decoys");
@@ -26,7 +26,7 @@ public class StrategyTest {
   }
 
   @Test
-  public void testDecoyDuck() {
+  void testDecoyDuck() {
     Decoy decoy = new Decoy();
     assertEquals(decoy.describe(), "I'm a decoy duck");
     assertEquals(decoy.swim(), "All ducks float, even decoys");
@@ -35,7 +35,7 @@ public class StrategyTest {
   }
 
   @Test
-  public void testRedHead() {
+  void testRedHead() {
     RedHead readHead = new RedHead();
     assertEquals(readHead.describe(), "I am a real read head duck");
     assertEquals(readHead.swim(), "All ducks float, even decoys");
@@ -44,7 +44,7 @@ public class StrategyTest {
   }
 
   @Test
-  public void testModelDuck() {
+  void testModelDuck() {
     Model model = new Model();
     assertEquals(model.describe(), "I am a model duck");
     assertEquals(model.swim(), "All ducks float, even decoys");
@@ -53,7 +53,7 @@ public class StrategyTest {
   }
 
   @Test
-  public void testModelDuckRedefined() {
+  void testModelDuckRedefined() {
     Model model = new Model();
     assertEquals(model.doFly(), "can't fly");
 
