@@ -1,15 +1,10 @@
 package org.vspaz.behavioral.strategy;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
-
-import org.vspaz.behavioral.strategy.ducks.Decoy;
-import org.vspaz.behavioral.strategy.ducks.Mallard;
-import org.vspaz.behavioral.strategy.ducks.Model;
-import org.vspaz.behavioral.strategy.ducks.RedHead;
-import org.vspaz.behavioral.strategy.ducks.RubberToy;
+import org.vspaz.behavioral.strategy.ducks.*;
 import org.vspaz.behavioral.strategy.fly.FlyRocketPowered;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StrategyTest {
   @Test
