@@ -1,5 +1,5 @@
 package org.vspaz.structural.proxy;
 
 abstract class Worker {
-    public abstract String doWork();
+  public abstract String doWork();
 }

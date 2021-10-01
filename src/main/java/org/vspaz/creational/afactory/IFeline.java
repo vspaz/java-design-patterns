@@ -1,5 +1,3 @@
 package org.vspaz.creational.afactory;
 
-public interface IFeline extends IAnimalae {
-
-}
+public interface IFeline extends IAnimalae {}

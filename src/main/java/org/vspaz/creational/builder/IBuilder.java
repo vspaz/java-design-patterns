@@ -1,11 +1,11 @@
 package org.vspaz.creational.builder;
 
 public interface IBuilder {
-    void Body(String bodyType);
+  void Body(String bodyType);
 
-    void Wheels(int wheelCount);
+  void Wheels(int wheelCount);
 
-    void Headlights(String headlightsType);
+  void Headlights(String headlightsType);
 
-    String Build();
+  String Build();
 }

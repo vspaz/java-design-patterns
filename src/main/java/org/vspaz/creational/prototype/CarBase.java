@@ -4,23 +4,23 @@ import java.util.Random;
 
 public abstract class CarBase implements Cloneable {
 
-    public String modelName;
-    public int basePrice;
-    public int onRoadPrice;
+  public String modelName;
+  public int basePrice;
+  public int onRoadPrice;
 
-    public String getModelName() {
-        return modelName;
-    }
+  public static int setExtraPrice() {
+    return new Random().nextInt(10_000);
+  }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
+  public String getModelName() {
+    return modelName;
+  }
 
-    public static int setExtraPrice() {
-        return new Random().nextInt(10_000);
-    }
+  public void setModelName(String modelName) {
+    this.modelName = modelName;
+  }
 
-    public CarBase clone() throws CloneNotSupportedException {
-        return (CarBase) super.clone();
-    }
+  public CarBase clone() throws CloneNotSupportedException {
+    return (CarBase) super.clone();
+  }
 }

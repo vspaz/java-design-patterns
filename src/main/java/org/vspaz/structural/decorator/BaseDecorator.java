@@ -1,17 +1,17 @@
 package org.vspaz.structural.decorator;
 
 abstract class BaseDecorator extends BuildingBlock {
-    protected BuildingBlock buildingBlock;
+  protected BuildingBlock buildingBlock;
 
-    public void setBuildingBlock(BuildingBlock block) {
-        buildingBlock = block;
-    }
+  public void setBuildingBlock(BuildingBlock block) {
+    buildingBlock = block;
+  }
 
-    @Override
-    public String buildHouse() {
-        if (buildingBlock != null) {
-            return buildingBlock.buildHouse();
-        }
-        return "not built yet";
+  @Override
+  public String buildHouse() {
+    if (buildingBlock != null) {
+      return buildingBlock.buildHouse();
     }
+    return "not built yet";
+  }
 }
