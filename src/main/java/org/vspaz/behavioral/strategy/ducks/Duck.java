@@ -4,30 +4,30 @@ import org.vspaz.behavioral.strategy.fly.Fly;
 import org.vspaz.behavioral.strategy.quack.Quack;
 
 public abstract class Duck {
-    Fly fly;
-    Quack quack;
+  Fly fly;
+  Quack quack;
 
-    public Duck() {}
+  public Duck() {}
 
-    public void setFlyBehavior(Fly fly) {
-        this.fly = fly;
-    }
+  public void setFlyBehavior(Fly fly) {
+    this.fly = fly;
+  }
 
-    public void setQuackBehavior(Quack quack) {
-        this.quack = quack;
-    }
+  public void setQuackBehavior(Quack quack) {
+    this.quack = quack;
+  }
 
-    abstract String describe();
+  abstract String describe();
 
-    public String doFly() {
-        return fly.fly();
-    }
+  public String doFly() {
+    return fly.fly();
+  }
 
-    public String doQuack() {
-        return quack.quack();
-    }
+  public String doQuack() {
+    return quack.quack();
+  }
 
-    public String swim() {
-        return "All ducks float, even decoys";
-    }
+  public String swim() {
+    return "All ducks float, even decoys";
+  }
 }
