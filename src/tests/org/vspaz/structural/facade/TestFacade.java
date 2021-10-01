@@ -1,11 +1,11 @@
 package org.vspaz.structural.facade;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class TestFacade {
     @Test
-    void testFacadeOk() {
+    public void testFacadeOk() {
         Facade robotFacade = new Facade();
         Assert.assertEquals(
                 robotFacade.buildRobot(),

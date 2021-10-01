@@ -4,9 +4,9 @@ public class Sedan implements IVehicle{
     private final String carType;
 
     public Sedan() {
-        carType = String.format("'%s' created", Sedan.class.getName());
+        carType = String.format("car '%s'", Sedan.class.getName());
     }
     public String getInfo(String color) {
-        return String.format("car '%s' of color '%s' is created", carType, color);
+        return String.format("%s of color '%s' is created", carType, color);
     }
 }
