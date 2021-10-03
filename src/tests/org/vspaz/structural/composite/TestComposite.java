@@ -6,7 +6,7 @@ import org.vspaz.structural.compisite.Employee;
 import org.vspaz.structural.compisite.IEmployee;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,7 +14,7 @@ public class TestComposite {
   @Test
   void testCompositeOk() {
     CompositeEmployee EngineeringManagerUI = new CompositeEmployee("UI Engineering Manager", "UI");
-    CompositeEmployee engineeringManager_2 =
+    CompositeEmployee engineeringManagerBackend =
         new CompositeEmployee("Backend Engineering Manager", "backend");
 
     IEmployee frontendDev_1 = new Employee("dev_1", "UI");
@@ -23,22 +23,24 @@ public class TestComposite {
     EngineeringManagerUI.addEmployee(frontendDev_1);
     EngineeringManagerUI.addEmployee(frontendDev_2);
 
-    engineeringManager_2.addEmployee(new Employee("dev_3", "backend"));
-    engineeringManager_2.addEmployee(new Employee("dev_4", "backend"));
+    IEmployee backendDev_1 = new Employee("dev_3", "backend");
+    IEmployee backendDev_2 = new Employee("dev_4", "backend");
+
+    engineeringManagerBackend.addEmployee(backendDev_1);
+    engineeringManagerBackend.addEmployee(backendDev_2);
 
     CompositeEmployee headOfEngineering = new CompositeEmployee("HeadOfEngineering", "Engineering");
     headOfEngineering.addEmployee(EngineeringManagerUI);
-    headOfEngineering.addEmployee(engineeringManager_2);
+    headOfEngineering.addEmployee(engineeringManagerBackend);
 
-    List<IEmployee> engineeringManagers = new ArrayList<>();
-    engineeringManagers.add(EngineeringManagerUI);
-    engineeringManagers.add(engineeringManager_2);
-    assertEquals(headOfEngineering.getHierarchy(), engineeringManagers);
-
-    List<IEmployee> frontendDevs = new ArrayList<>();
-    frontendDevs.add(frontendDev_1);
-    frontendDevs.add(frontendDev_2);
-
-    assertEquals(EngineeringManagerUI.getHierarchy(), frontendDevs);
+    assertEquals(
+        headOfEngineering.getHierarchy(),
+        new ArrayList<>(Arrays.asList(EngineeringManagerUI, engineeringManagerBackend)));
+    assertEquals(
+        EngineeringManagerUI.getHierarchy(),
+        new ArrayList<>(Arrays.asList(frontendDev_1, frontendDev_2)));
+    assertEquals(
+        engineeringManagerBackend.getHierarchy(),
+        new ArrayList<>(Arrays.asList(backendDev_1, backendDev_2)));
   }
 }
