@@ -5,10 +5,10 @@ import java.util.List;
 
 public class CompositeEmployee implements IEmployee {
 
-  private int employeeCount = 0;
-  private String name;
-  private String department;
-  private List<IEmployee> directReports;
+  private final int employeeCount = 0;
+  private final String name;
+  private final String department;
+  private final List<IEmployee> directReports;
 
   public CompositeEmployee(String name, String department) {
     this.name = name;
