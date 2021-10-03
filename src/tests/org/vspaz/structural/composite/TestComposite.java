@@ -13,22 +13,32 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestComposite {
   @Test
   void testCompositeOk() {
-    CompositeEmployee engineeringManager_1 = new CompositeEmployee("UI Engineering Manager", "UI");
+    CompositeEmployee EngineeringManagerUI = new CompositeEmployee("UI Engineering Manager", "UI");
     CompositeEmployee engineeringManager_2 =
         new CompositeEmployee("Backend Engineering Manager", "backend");
 
-    engineeringManager_1.addEmployee(new Employee("dev_1", "UI"));
-    engineeringManager_1.addEmployee(new Employee("dev_2", "UI"));
+    IEmployee frontendDev_1 = new Employee("dev_1", "UI");
+    IEmployee frontendDev_2 = new Employee("dev_2", "UI");
+
+    EngineeringManagerUI.addEmployee(frontendDev_1);
+    EngineeringManagerUI.addEmployee(frontendDev_2);
 
     engineeringManager_2.addEmployee(new Employee("dev_3", "backend"));
     engineeringManager_2.addEmployee(new Employee("dev_4", "backend"));
 
-    CompositeEmployee headOfEngineering = new CompositeEmployee("HeadOfengineering", "Engineering");
-    headOfEngineering.addEmployee(engineeringManager_1);
+    CompositeEmployee headOfEngineering = new CompositeEmployee("HeadOfEngineering", "Engineering");
+    headOfEngineering.addEmployee(EngineeringManagerUI);
     headOfEngineering.addEmployee(engineeringManager_2);
+
     List<IEmployee> engineeringManagers = new ArrayList<>();
-    engineeringManagers.add(engineeringManager_1);
+    engineeringManagers.add(EngineeringManagerUI);
     engineeringManagers.add(engineeringManager_2);
     assertEquals(headOfEngineering.getHierarchy(), engineeringManagers);
+
+    List<IEmployee> frontendDevs = new ArrayList<>();
+    frontendDevs.add(frontendDev_1);
+    frontendDevs.add(frontendDev_2);
+
+    assertEquals(EngineeringManagerUI.getHierarchy(), frontendDevs);
   }
 }
