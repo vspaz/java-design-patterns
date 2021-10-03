@@ -1,4 +1,4 @@
-package org.vspaz.compisite;
+package org.vspaz.structural.compisite;
 
 import java.util.List;
 
