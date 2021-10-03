@@ -1,7 +1,9 @@
 package org.vspaz.compisite;
 
+import java.util.List;
+
 interface IEmployee {
-  String getHierarchy();
+  List<IEmployee> getHierarchy();
 
   int getCount();
 }
