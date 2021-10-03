@@ -30,6 +30,5 @@ public class TestComposite {
     engineeringManagers.add(engineeringManager_1);
     engineeringManagers.add(engineeringManager_2);
     assertEquals(headOfEngineering.getHierarchy(), engineeringManagers);
-
   }
 }
