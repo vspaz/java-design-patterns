@@ -7,7 +7,7 @@ public class Off implements State {
   }
 
   @Override
-  public String buttonPressed() {
+  public String onButtonPressed() {
     return "'OFF' is already activated";
   }
 }
