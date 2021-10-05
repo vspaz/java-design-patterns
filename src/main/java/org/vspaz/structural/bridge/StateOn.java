@@ -8,6 +8,6 @@ public class StateOn implements State {
 
   @Override
   public String buttonPressed() {
-    return "'ON' is already activate";
+    return "'ON' is already activated";
   }
 }
