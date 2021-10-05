@@ -1,6 +1,6 @@
-package org.vspaz.structural.bridge;
+package org.vspaz.structural.bridge.states;
 
-public class StateOn implements State {
+public class On implements State {
   @Override
   public String switchState() {
     return "state 'ON'";
