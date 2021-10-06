@@ -1,5 +1,5 @@
 package org.vspaz.behavioral.visitor;
 
-interface IVehicle {
+interface ICity {
   String acceptVisitor(IVisitor visitor);
 }

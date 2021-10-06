@@ -8,7 +8,7 @@ public class TestVisitor {
   @Test
   void testVisitorOk() {
     Visitor visitor = new Visitor();
-    Car car = new Car();
-    assertEquals("NYC visited.", car.acceptVisitor(visitor));
+    City city = new City();
+    assertEquals("NYC visited.", city.acceptVisitor(visitor));
   }
 }
