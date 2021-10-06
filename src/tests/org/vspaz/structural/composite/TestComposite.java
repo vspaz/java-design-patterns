@@ -1,9 +1,6 @@
 package org.vspaz.structural.composite;
 
 import org.junit.jupiter.api.Test;
-import org.vspaz.structural.compisite.CompositeEmployee;
-import org.vspaz.structural.compisite.Employee;
-import org.vspaz.structural.compisite.IEmployee;
 
 import java.util.ArrayList;
 import java.util.Arrays;

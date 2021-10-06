@@ -18,7 +18,7 @@ public class Device {
   }
 
   public String switchState() {
-    return "the devis is in " + state.switchState();
+    return "the device is in " + state.switchState();
   }
 
   public String onButtonPressed() {
