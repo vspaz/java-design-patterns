@@ -1,7 +1,7 @@
 package org.vspaz.behavioral.visitor;
 
 public class Car implements IVehicle {
-  private final String status = "initial status";
+  private final String city = "NYC";
 
   @Override
   public String acceptVisitor(IVisitor visitor) {
@@ -9,6 +9,6 @@ public class Car implements IVehicle {
   }
 
   public String getStatus() {
-    return status;
+    return city;
   }
 }
