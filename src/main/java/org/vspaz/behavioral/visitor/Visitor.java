@@ -2,7 +2,7 @@ package org.vspaz.behavioral.visitor;
 
 public class Visitor implements IVisitor {
   @Override
-  public String visit(City city) {
-    return city.getName() + " visited.";
+  public String visit(IPlace place) {
+    return place.getName() + " visited.";
   }
 }

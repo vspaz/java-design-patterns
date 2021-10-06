@@ -1,7 +1,7 @@
 package org.vspaz.behavioral.visitor;
 
-public class City implements IPlace {
-  private final String city = "NYC";
+public class Village implements IPlace {
+  private final String village = "in the middle of nowhere";
 
   @Override
   public String acceptVisitor(IVisitor visitor) {
@@ -9,6 +9,6 @@ public class City implements IPlace {
   }
 
   public String getName() {
-    return city;
+    return village;
   }
 }
