@@ -1,4 +1,5 @@
 package org.vspaz.behavioral.observer;
 
-public class IObserver {
+interface IObserver {
+  void update(int value);
 }
