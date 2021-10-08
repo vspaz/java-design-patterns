@@ -3,17 +3,17 @@ package org.vspaz.behavioral.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subject implements ISubject {
+public class Subscriber implements ISubscriber {
   List<Observer> observerList = new ArrayList<>();
-  private int flag;
+  private int value;
 
-  public int getFlag() {
-    return flag;
+  public int getValue() {
+    return value;
   }
 
-  public String setFlag(int flag) {
-    this.flag = flag;
-    return notify(flag);
+  public String update(int value) {
+    this.value = value;
+    return notify(value);
   }
 
   @Override
