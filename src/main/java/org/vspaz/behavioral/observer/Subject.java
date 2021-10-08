@@ -10,9 +10,9 @@ public class Subject implements ISubject {
     return flag;
   }
 
-  public void setFlag(int flag) {
+  public String setFlag(int flag) {
     this.flag = flag;
-    notifyRegisteredUsers(flag);
+    return notifyRegisteredUsers(flag);
   }
 
   List<Observer> observerList = new ArrayList<>();
@@ -28,9 +28,13 @@ public class Subject implements ISubject {
   }
 
   @Override
-  public void notifyRegisteredUsers(int value) {
+  public String notifyRegisteredUsers(int value) {
+    StringBuilder observers = new StringBuilder();
     for (Observer observer : observerList) {
       observer.update(value);
+      observers.append(observer.observerName);
+      observers.append(" ");
     }
+    return "event received; all observers updated: " + observers + ".";
   }
 }

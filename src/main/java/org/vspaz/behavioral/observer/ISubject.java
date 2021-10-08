@@ -5,5 +5,5 @@ interface ISubject {
 
   void unregister(Observer anObserver);
 
-  void notifyRegisteredUsers(int value);
+  String notifyRegisteredUsers(int value);
 }
