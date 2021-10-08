@@ -13,7 +13,7 @@ public class Subject implements ISubject {
 
   public String setFlag(int flag) {
     this.flag = flag;
-    return notifyRegisteredUsers(flag);
+    return notify(flag);
   }
 
   @Override
@@ -27,7 +27,7 @@ public class Subject implements ISubject {
   }
 
   @Override
-  public String notifyRegisteredUsers(int value) {
+  public String notify(int value) {
     StringBuilder observers = new StringBuilder();
     for (Observer observer : observerList) {
       observer.update(value);
