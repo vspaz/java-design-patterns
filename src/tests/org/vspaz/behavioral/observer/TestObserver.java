@@ -14,6 +14,7 @@ public class TestObserver {
     subject.register(observer_1);
     subject.register(observer_2);
 
-    assertEquals("event received; all observers updated: observer_1 observer_2 .", subject.setFlag(100));
+    assertEquals(
+        "event received; all observers updated: observer_1 observer_2 .", subject.setFlag(100));
   }
 }

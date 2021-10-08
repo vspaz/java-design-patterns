@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Subject implements ISubject {
+  List<Observer> observerList = new ArrayList<>();
   private int flag;
 
   public int getFlag() {
@@ -14,8 +15,6 @@ public class Subject implements ISubject {
     this.flag = flag;
     return notifyRegisteredUsers(flag);
   }
-
-  List<Observer> observerList = new ArrayList<>();
 
   @Override
   public void register(Observer anObserver) {
