@@ -7,14 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestObserver {
   @Test
   void testObserverOk() {
-    Observer observer_1 = new Observer("observer_1");
-    Observer observer_2 = new Observer("observer_2");
-
     Subject subject = new Subject();
-    subject.register(observer_1);
-    subject.register(observer_2);
-
+    StringBuilder registeredObservers = new StringBuilder();
+    for (int i = 1; i <= 10; i++) {
+      String observerName = "observer_" + i;
+      subject.register(new Observer(observerName));
+      registeredObservers.append(observerName);
+      registeredObservers.append(" ");
+    }
     assertEquals(
-        "event received; all observers updated: observer_1 observer_2 .", subject.setFlag(100));
+            "event received; all observers updated: " + registeredObservers + ".", subject.setFlag(100));
   }
 }
