@@ -3,6 +3,7 @@ package org.vspaz.behavioral.template;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TestTemplate {
   @Test
@@ -14,9 +15,12 @@ public class TestTemplate {
     assertEquals("abstract drink is poured into the cup", coffee.pourInCup());
 
     Tea tea = new Tea();
-    assertEquals("water boiled for abstract drink",  tea.boilWater());
-    assertEquals(
-            "tea bag steeped; lemon added", tea.prepareRecipe());
+    assertEquals("water boiled for abstract drink", tea.boilWater());
+    assertEquals("tea bag steeped; lemon added", tea.prepareRecipe());
     assertEquals("abstract drink is poured into the cup", tea.pourInCup());
+
+    assertEquals(coffee.boilWater(), tea.boilWater());
+    assertNotEquals(coffee.prepareRecipe(), tea.prepareRecipe());
+    assertEquals(coffee.pourInCup(), tea.pourInCup());
   }
 }
