@@ -12,5 +12,11 @@ public class TestTemplate {
     assertEquals(
         "coffee's ground and brewed; sugar and milk added to coffee", coffee.prepareRecipe());
     assertEquals("abstract drink is poured into the cup", coffee.pourInCup());
+
+    Tea tea = new Tea();
+    assertEquals("water boiled for abstract drink",  tea.boilWater());
+    assertEquals(
+            "tea bag steeped; lemon added", tea.prepareRecipe());
+    assertEquals("abstract drink is poured into the cup", tea.pourInCup());
   }
 }
