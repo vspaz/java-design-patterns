@@ -6,10 +6,10 @@ public abstract class CaffeineDrink {
   }
 
   public String boilWater() {
-    return "water boiled for abstract drink";
+    return "water boiled";
   }
 
   public String pourInCup() {
-    return "abstract drink is poured into the cup";
+    return "poured into cup";
   }
 }

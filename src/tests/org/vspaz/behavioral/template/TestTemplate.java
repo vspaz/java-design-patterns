@@ -9,15 +9,14 @@ public class TestTemplate {
   @Test
   void testTemplateOk() {
     Coffee coffee = new Coffee();
-    assertEquals("water boiled for abstract drink", coffee.boilWater());
-    assertEquals(
-        "coffee's ground and brewed; sugar and milk added to coffee", coffee.prepareRecipe());
-    assertEquals("abstract drink is poured into the cup", coffee.pourInCup());
+    assertEquals("water boiled", coffee.boilWater());
+    assertEquals("coffee brewed; sugar and milk added to coffee", coffee.prepareRecipe());
+    assertEquals("poured into cup", coffee.pourInCup());
 
     Tea tea = new Tea();
-    assertEquals("water boiled for abstract drink", tea.boilWater());
+    assertEquals("water boiled", tea.boilWater());
     assertEquals("tea bag steeped; lemon added", tea.prepareRecipe());
-    assertEquals("abstract drink is poured into the cup", tea.pourInCup());
+    assertEquals("poured into cup", tea.pourInCup());
 
     assertEquals(coffee.boilWater(), tea.boilWater());
     assertNotEquals(coffee.prepareRecipe(), tea.prepareRecipe());

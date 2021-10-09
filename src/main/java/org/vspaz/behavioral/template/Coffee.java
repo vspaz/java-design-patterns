@@ -7,7 +7,7 @@ public class Coffee extends CaffeineDrink {
   }
 
   public String brewCoffeeGrinds() {
-    return "coffee's ground and brewed";
+    return "coffee brewed";
   }
 
   public String addSugarAndMilk() {
