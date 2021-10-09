@@ -3,7 +3,7 @@ package org.vspaz.behavioral.template;
 public class Tea extends CaffeineDrink {
   @Override
   public String prepareRecipe() {
-    return steepTeaBag() + " " + addLemon();
+    return steepTeaBag() + "; " + addLemon();
   }
 
   public String steepTeaBag() {
