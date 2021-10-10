@@ -1,6 +1,6 @@
 package org.vspaz.behavioral.command;
 
-public class UndoCommand implements ICommand {
+public class Redo implements ICommand {
   @Override
   public String runCommand() {
     return null;
