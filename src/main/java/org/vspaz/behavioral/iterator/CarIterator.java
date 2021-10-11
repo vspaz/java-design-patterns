@@ -16,7 +16,7 @@ public class CarIterator implements Iterator {
 
   @Override
   public String next() {
-    return cars[position++];
+    return this.cars[++position];
   }
 
   @Override
