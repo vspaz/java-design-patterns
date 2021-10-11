@@ -1,5 +1,5 @@
 package org.vspaz.behavioral.iterator;
 
 public interface IVehicle {
-  Iterator createIterator();
+  Iterator createIterator(String[] collection);
 }
