@@ -2,7 +2,7 @@ package org.vspaz.behavioral.iterator;
 
 public class CarIterator implements Iterator {
   private final String[] cars;
-  private final int position;
+  private int position;
 
   public CarIterator(String[] cars) {
     this.cars = cars;
@@ -10,20 +10,22 @@ public class CarIterator implements Iterator {
   }
 
   @Override
-  public void first() {}
+  public void first() {
+    this.position = 0;
+  }
 
   @Override
   public String next() {
-    return null;
+    return cars[position++];
   }
 
   @Override
   public String getCurrent() {
-    return null;
+    return cars[position];
   }
 
   @Override
   public boolean hasNext() {
-    return false;
+    return position <= cars.length;
   }
 }
