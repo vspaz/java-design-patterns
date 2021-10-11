@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class TestIterator {
   @Test
@@ -13,7 +14,10 @@ public class TestIterator {
     Iterator cars = garage.createIterator(parkedCars);
     assertEquals("audi", cars.getCurrent());
     assertEquals("bmw", cars.next());
-    assertEquals("bmw", cars.getCurrent());
     assertTrue(cars.hasNext());
+    cars.next();  // -> mercedes
+    cars.next();  // -> tesla
+    assertEquals("tesla", cars.getCurrent());
+    assertFalse(cars.hasNext());
   }
 }

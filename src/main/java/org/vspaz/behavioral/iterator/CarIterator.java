@@ -26,6 +26,6 @@ public class CarIterator implements Iterator {
 
   @Override
   public boolean hasNext() {
-    return position <= cars.length;
+    return position < cars.length - 1;
   }
 }
