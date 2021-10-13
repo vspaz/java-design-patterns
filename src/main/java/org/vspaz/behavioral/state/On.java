@@ -19,4 +19,9 @@ public class On implements IState {
     return "'Mute' button pressed; switching from 'On' to 'Mute': "
         + ctx.getCurrentState().toString();
   }
+
+  @Override
+  public String toString() {
+    return "device's on";
+  }
 }
