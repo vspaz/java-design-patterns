@@ -3,16 +3,17 @@ package org.vspaz.behavioral.state;
 public class Off implements IState {
   @Override
   public String pressOnButton(Device ctx) {
-    return null;
+    ctx.setCurrentState(new On());
+    return "'On' button pressed; switching from 'Off' to 'On': " + ctx.getCurrentState().toString();
   }
 
   @Override
   public String pressOffButton(Device ctx) {
-    return null;
+    return "'Off' button pressed; device is already off; 'Off' ignored.";
   }
 
   @Override
   public String pressMuteButton(Device ctx) {
-    return null;
+    return "'Off' button pressed; device is already off; 'Mute' ignored.";
   }
 }
