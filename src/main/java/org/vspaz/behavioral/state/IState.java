@@ -1,9 +1,9 @@
 package org.vspaz.behavioral.state;
 
 public interface IState {
-  String pressOnButton();
+  String pressOnButton(Device ctx);
 
-  String pressOffButton();
+  String pressOffButton(Device ctx);
 
-  String pressMuteButton();
+  String pressMuteButton(Device ctx);
 }
