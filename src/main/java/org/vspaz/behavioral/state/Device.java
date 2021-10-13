@@ -19,7 +19,7 @@ public class Device {
     return currentState.pressOffButton(this);
   }
 
-  public String pressOnbutton() {
+  public String pressOnButton() {
     return currentState.pressOnButton(this);
   }
 
