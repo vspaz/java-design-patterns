@@ -19,6 +19,6 @@ public class Off implements IState {
 
   @Override
   public String toString() {
-    return "device's off";
+    return "device's off.";
   }
 }

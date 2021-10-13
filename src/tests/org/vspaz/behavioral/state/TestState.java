@@ -10,6 +10,9 @@ public class TestState {
     Device device = new Device();
     assertEquals(
         "'Off' button pressed; device is already off; 'Off' ignored.", device.pressOffButton());
-    assertEquals("device's off", device.getCurrentState().toString());
+    assertEquals("device's off.", device.getCurrentState().toString());
+
+    assertEquals("'On' button pressed; switching from 'Off' to 'On': device's on.", device.pressOnbutton());
+    assertEquals("'Mute' button pressed; switching from 'On' to 'Mute': device's muted.", device.pressMuteButton());
   }
 }

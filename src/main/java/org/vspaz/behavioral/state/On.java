@@ -22,6 +22,6 @@ public class On implements IState {
 
   @Override
   public String toString() {
-    return "device's on";
+    return "device's on.";
   }
 }

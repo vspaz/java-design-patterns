@@ -21,6 +21,6 @@ public class Mute implements IState {
   }
 
   public String toString() {
-    return "device's muted";
+    return "device's muted.";
   }
 }
