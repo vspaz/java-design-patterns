@@ -16,4 +16,9 @@ public class Off implements IState {
   public String pressMuteButton(Device ctx) {
     return "'Off' button pressed; device is already off; 'Mute' ignored.";
   }
+
+  @Override
+  public String toString() {
+    return "device 'Off'";
+  }
 }
