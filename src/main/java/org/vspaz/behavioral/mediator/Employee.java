@@ -24,7 +24,7 @@ abstract class Employee {
     this.name = name;
   }
 
-  public void notify(String message) throws InterruptedException {
+  public void notify(String message) {
     mediator.notify(this, message);
   }
 
