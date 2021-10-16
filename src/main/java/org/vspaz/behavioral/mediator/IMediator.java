@@ -1,7 +1,9 @@
 package org.vspaz.behavioral.mediator;
 
-public interface IMediator {
-  void register(Employee employee);
+import java.util.List;
 
-  void notify(Employee employee, String message);
+public interface IMediator {
+  List<Employee> register(Employee employee);
+
+  String notify(Employee employee, String message);
 }
