@@ -1,5 +1,3 @@
 package org.vspaz.behavioral.mediator;
 
-public interface IMediator {
-
-}
+abstract class Employee {}
