@@ -1,4 +1,4 @@
 package org.vspaz.behavioral.mediator;
 
-public interface Mediator {
+public interface IMediator {
 }
