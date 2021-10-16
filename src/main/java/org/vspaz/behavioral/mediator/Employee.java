@@ -24,8 +24,8 @@ abstract class Employee {
     this.name = name;
   }
 
-  public void notify(String message) {
-    mediator.notify(this, message);
+  public String notify(String message) {
+    return mediator.notify(this, message);
   }
 
   public abstract String getEmployeeType();
