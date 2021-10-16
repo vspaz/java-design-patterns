@@ -1,7 +1,6 @@
 package org.vspaz.behavioral.mediator;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -22,7 +21,6 @@ public class Mediator implements IMediator {
 
   @Override
   public String notify(Employee employee, String message) {
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
     if (staff.contains(employee)) {
       try {
         Thread.sleep(1_000);
@@ -31,6 +29,6 @@ public class Mediator implements IMediator {
         e.printStackTrace();
       }
     }
-    return String.format("'%s' tries to notify", employee.getName());
+    return String.format("unknown user '%s' tries to notify", employee.getName());
   }
 }

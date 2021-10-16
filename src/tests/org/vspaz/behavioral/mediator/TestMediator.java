@@ -24,8 +24,6 @@ public class TestMediator {
     assertEquals(staff.size(), 3);
 
     Sre sre_1 = new Sre(mediator, "sre_1");
-    mediator.register(sre_1);
-    assertEquals(staff.size(), 4);
 
     assertEquals(
         String.format("'devOps_1' posted message at %s", mediator.getCurrentTime()),
@@ -34,5 +32,7 @@ public class TestMediator {
     assertEquals(
         String.format("'devOps_2' posted message at %s", mediator.getCurrentTime()),
         devOps_2.notify("bar"));
+
+    assertEquals("unknown user 'sre_1' tries to notify", sre_1.notify("baz"));
   }
 }
