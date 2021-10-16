@@ -3,7 +3,7 @@ package org.vspaz.behavioral.mediator;
 import java.util.List;
 
 public interface IMediator {
-  List<Employee> register(Employee employee);
+  List<User> register(User employee);
 
-  String notify(Employee employee, String message);
+  String notify(User employee, String message);
 }

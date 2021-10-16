@@ -10,29 +10,25 @@ public class TestMediator {
   @Test
   void testMediatorOk() {
     Mediator mediator = new Mediator();
-    DevOps devOps_1 = new DevOps(mediator, "devOps_1");
-    List<Employee> staff = mediator.register(devOps_1);
+    ChatUser chatUser_1 = new ChatUser(mediator, "chatUser_1");
+    List<User> chatRoom = mediator.register(chatUser_1);
 
-    assertEquals(staff.size(), 1);
+    assertEquals(chatRoom.size(), 1);
 
-    DevOps devOps_2 = new DevOps(mediator, "devOps_2");
-    staff = mediator.register(devOps_2);
-    assertEquals(staff.size(), 2);
+    ChatUser chatUser_2 = new ChatUser(mediator, "chatUser_2");
+    chatRoom = mediator.register(chatUser_2);
+    assertEquals(chatRoom.size(), 2);
 
-    Ops ops_1 = new Ops(mediator, "ops_1");
-    mediator.register(ops_1);
-    assertEquals(staff.size(), 3);
-
-    Sre sre_1 = new Sre(mediator, "sre_1");
+    ChatUser unregisteredUser = new ChatUser(mediator, "unregisteredUser");
 
     assertEquals(
-        String.format("'devOps_1' posted message at %s", mediator.getCurrentTime()),
-        devOps_1.notify("foo"));
+        String.format("'chatUser_1' posted message at %s", mediator.getCurrentTime()),
+        chatUser_1.notify("foo"));
 
     assertEquals(
-        String.format("'devOps_2' posted message at %s", mediator.getCurrentTime()),
-        devOps_2.notify("bar"));
+        String.format("'chatUser_2' posted message at %s", mediator.getCurrentTime()),
+        chatUser_2.notify("bar"));
 
-    assertEquals("unknown user 'sre_1' tries to notify", sre_1.notify("baz"));
+    assertEquals("unknown user 'unregisteredUser' tries to notify", unregisteredUser.notify("baz"));
   }
 }

@@ -1,10 +1,10 @@
 package org.vspaz.behavioral.mediator;
 
-abstract class Employee {
+abstract class User {
   protected IMediator mediator;
   protected String name;
 
-  public Employee(IMediator mediator) {
+  public User(IMediator mediator) {
     this.mediator = mediator;
   }
 

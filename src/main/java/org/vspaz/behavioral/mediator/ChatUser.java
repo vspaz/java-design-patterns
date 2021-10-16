@@ -1,14 +1,14 @@
 package org.vspaz.behavioral.mediator;
 
-public class DevOps extends Employee {
+public class ChatUser extends User {
 
-  public DevOps(IMediator mediator, String name) {
+  public ChatUser(IMediator mediator, String name) {
     super(mediator);
     this.name = name;
   }
 
   @Override
   public String getEmployeeType() {
-    return "DevOps";
+    return this.name;
   }
 }
