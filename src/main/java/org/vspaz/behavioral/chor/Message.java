@@ -6,7 +6,7 @@ public class Message {
   public MessagePriority messagePriority;
 
   public Message(String msg, MessagePriority priority) {
-    messagePriority = priority;
     message = msg;
+    messagePriority = priority;
   }
 }
