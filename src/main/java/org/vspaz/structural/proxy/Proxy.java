@@ -1,6 +1,6 @@
 package org.vspaz.structural.proxy;
 
-public class  Proxy extends Worker {
+public class Proxy extends Worker {
   static Worker worker;
 
   @Override
