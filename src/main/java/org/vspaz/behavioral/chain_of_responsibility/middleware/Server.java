@@ -17,4 +17,16 @@ public class Server {
     }
     return "user unauthorized";
   }
+
+  public void register(String email, String password) {
+    emailToPassword.put(email, password);
+  }
+
+  public boolean hasEmail(String email) {
+    return emailToPassword.containsKey(email);
+  }
+
+  public boolean isPasswordValid(String email, String password) {
+    return emailToPassword.get(email).equals(password);
+  }
 }
