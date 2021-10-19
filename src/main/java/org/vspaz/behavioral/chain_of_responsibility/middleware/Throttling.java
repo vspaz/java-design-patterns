@@ -1,12 +1,12 @@
 package org.vspaz.behavioral.chain_of_responsibility.middleware;
 
-public class ThrottlingMwe extends MweBase {
+public class Throttling extends Base {
 
   private final int rps;
   private int requestCount;
   private long currentTime;
 
-  public ThrottlingMwe(int rps) {
+  public Throttling(int rps) {
     this.rps = rps;
     this.currentTime = System.currentTimeMillis();
   }

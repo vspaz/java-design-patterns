@@ -1,9 +1,9 @@
 package org.vspaz.behavioral.chain_of_responsibility.middleware;
 
-public abstract class MweBase {
-  private MweBase next;
+public abstract class Base {
+  private Base next;
 
-  public MweBase linkTo(MweBase next) {
+  public Base linkTo(Base next) {
     this.next = next;
     return next;
   }
