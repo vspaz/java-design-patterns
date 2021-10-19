@@ -14,7 +14,8 @@ public class Server {
   }
 
   public String logIn(String email, String password) {
-    if ("admin@example.com".equals(middleware.check(email, password))) {
+    if ("admin@example.com".equals(middleware.check(email, password))
+        || "user@example.com".equals(middleware.check(email, password))) {
       return "user authorized";
     }
     return "user unauthorized";

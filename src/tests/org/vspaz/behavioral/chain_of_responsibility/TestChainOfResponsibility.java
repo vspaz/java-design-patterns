@@ -22,5 +22,7 @@ public class TestChainOfResponsibility {
     server.setMiddleware(mwe);
 
     assertEquals("user authorized", server.logIn("admin@example.com", "bar"));
+    assertEquals("user authorized", server.logIn("user@example.com", "foo"));
+    assertEquals("user unauthorized", server.logIn("user@gmail.com", "foo"));
   }
 }
