@@ -1,6 +1,6 @@
 package org.vspaz.behavioral.chain_of_responsibility.middleware;
 
-public class Throttling extends Base {
+public class Throttling extends Middleware {
 
   private final int rps;
   private int requestCount;

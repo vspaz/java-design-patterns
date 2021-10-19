@@ -2,7 +2,7 @@ package org.vspaz.behavioral.chain_of_responsibility.middleware;
 
 import org.vspaz.behavioral.chain_of_responsibility.server.Server;
 
-public class User extends Base {
+public class User extends Middleware {
   private final Server server;
 
   public User(Server server) {

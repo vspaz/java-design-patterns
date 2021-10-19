@@ -1,20 +1,20 @@
 package org.vspaz.behavioral.chain_of_responsibility.server;
 
-import org.vspaz.behavioral.chain_of_responsibility.middleware.Base;
+import org.vspaz.behavioral.chain_of_responsibility.middleware.Middleware;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Server {
   private final Map<String, String> emailToPassword = new HashMap<>();
-  private Base middleware;
+  private Middleware middleware;
 
-  public void setMiddleware(Base middleware) {
+  public void setMiddleware(Middleware middleware) {
     this.middleware = middleware;
   }
 
   public String logIn(String email, String password) {
-    if ("authorized".equals(middleware.check(email, password))) {
+    if ("admin@example.com".equals(middleware.check(email, password))) {
       return "user authorized";
     }
     return "user unauthorized";

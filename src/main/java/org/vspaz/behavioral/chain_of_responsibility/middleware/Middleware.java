@@ -1,9 +1,9 @@
 package org.vspaz.behavioral.chain_of_responsibility.middleware;
 
-public abstract class Base {
-  private Base next;
+public abstract class Middleware {
+  private Middleware next;
 
-  public Base linkTo(Base next) {
+  public Middleware linkTo(Middleware next) {
     this.next = next;
     return next;
   }
