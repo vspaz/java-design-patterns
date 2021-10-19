@@ -1,10 +1,12 @@
-package org.vspaz.behavioral.chain_of_responsibility.middleware;
+package org.vspaz.behavioral.chain_of_responsibility.server;
+
+import org.vspaz.behavioral.chain_of_responsibility.middleware.Base;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Server {
-  private Map<String, String> emailToPassword = new HashMap<>();
+  private final Map<String, String> emailToPassword = new HashMap<>();
   private Base middleware;
 
   public void setMiddleware(Base middleware) {
